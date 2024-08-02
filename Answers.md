@@ -1,0 +1,1 @@
+### You are tasked by the scouting department to create a machine learning model that predicts which NCAA players will become good NBA players. How would you approach this problem? Be sure to explain what dataset you would want to use in your answer.
