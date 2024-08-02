@@ -11,3 +11,12 @@ We would then split this dataset into training and testing sets. Using machine l
 Once we have a model with sufficient accuracy, we would apply it to current NCAA players. By inputting their college stats into the model, we could predict the likelihood of these players becoming good NBA players. This approach leverages historical data to provide valuable insights into the potential future success of NCAA athletes in the NBA.
 
 For the datasets, we can scrape Basketball Reference for NBA data and Sports Reference for college basketball data. Both sources provide comprehensive and similar stats, allowing us to conduct a uniform analysis. This ensures consistency and reliability in our data, ultimately leading to more accurate predictions.
+
+
+
+
+### You’ve built the machine learning model from question 1, and a scout wants some help understanding it. Explain how machine learning models would work in this specific context in one or two paragraphs, using simple language. 
+
+In this context, the machine learning model helps predict whether an NCAA player will become a "good" NBA player. We start by defining a "good" NBA player as someone who has been in the top 40% of players based on their Wins Above Replacement Player (WARP) rating for at least 4 seasons. We collect historical data from the past 15 years, including both NBA performance metrics and NCAA college stats for players who transitioned to the NBA.
+
+The model is trained using this data. It learns to recognize patterns and relationships between a player's college stats and their NBA success. We input various performance metrics like points, rebounds, assists, and factors like games played and injuries. The model identifies which attributes are most important for predicting success. Once trained, we can use the model to analyze current NCAA players. By feeding their college stats into the model, it can predict their likelihood of becoming a "good" NBA player. This helps scouts identify promising talent based on a data-driven approach, making the selection process more informed and accurate.
