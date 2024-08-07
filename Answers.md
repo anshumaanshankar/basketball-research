@@ -20,9 +20,9 @@ Using this dataset, we trained an ML model that provides clear insights into the
 
 ### The scouting department now wants you to expand your model and include international players in it as well. What are some of the challenges you would expect to face in incorporating them into the model?
 
-Expanding the model to include international players presents challenges due to the differences in leagues, playing styles, and available data. To address these challenges, we can adopt the following detailed approach:
+Expanding the model to include international players presents challenges due to the differences in competition level of leagues, playing styles, and available data. To address these challenges, we can adopt the following detailed approach:
 
-1. Collect comprehensive data from basketball-reference, which contains data from international leagues in addition to the NCAA and NBA. This way, uniformity in measured statistics is maintained.
+1. Collect comprehensive data from basketball-reference, which contains data from international leagues. By using the same source as our NBA data, uniformity is maintained.
 
 2. Next, We can standardize the data to account for differences in playing style and competition level between NCAA and intl. leagues. One method is variance transformation, where we normalize the stats within each league and then transform them to a common scale. For instance, we can calculate z-scores within each league and scale these scores to the NCAA. Another method is scalar transformations where we would apply multipliers to adjust stats from international leagues. These multipliers can be determined through historical analysis, comparing the performance of players who transitioned from those international leagues to the NBA.
 
@@ -30,4 +30,4 @@ Expanding the model to include international players presents challenges due to 
 
 4. For model training and validation, we need to ensure the model generalizes well to international players. Cross-league validation can help, where data from different leagues are used for training and testing to ensure the model performs well across all datasets. Continuing to use Shapley values will help us understand the contribution of each feature and identify if any particular feature behaves differently for international players.
 
-5. Integrating international player data into the existing model without disrupting its performance on NCAA players requires maintaining separate preprocessing pipelines for NCAA and international data but ensuring the final datasets fed into the model are comparable. Incrementally introducing international data to the model and monitoring performance metrics can help maintain or improve the model’s accuracy and precision.
+5. Integrating international player data into the existing model without disrupting its performance on NCAA players requires maintaining separate preprocessing pipelines for NCAA and international data owing to the transformations we apply. We must ensure that the final datasets fed into the model are comparable. Incrementally introducing international data to the model and monitoring performance metrics can help maintain or improve the model’s accuracy and precision.
